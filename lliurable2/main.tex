@@ -1,0 +1,30 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[left=3cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{csquotes}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+    \input{sections/titlepage}
+    \clearpage
+    
+	\mbox{}
+	\thispagestyle{empty}
+	\newpage
+
+    
+    \tableofcontents
+    \clearpage
+    
+    \input{sections/descripcio-tasques}   
+    \clearpage     
+    \input{sections/valoracio-alternatives}
+    \clearpage    
+    \input{sections/pla-accio}
+\end{document}
