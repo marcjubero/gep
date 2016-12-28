@@ -1,0 +1,13 @@
+\section{Disseny arquitectònic}
+Tot i formar part d'una plataforma, s'ha de pensar en aquest TFG com un mòdul que podria funcionar de forma independent.\\
+\newline A nivell d'arquitectura general del projecte, es comparteix l'arquitectura de la plataforma \textit{Made of Genes}:
+	\begin{itemize}
+		\item un client (navegador web) desenvolupat amb \textit{AngularJS}\cite{angular} un \textit{framework} javascript mantingut per Google que aporta els béns de l'arquitectura Model-Vista-Controlador (MVC\cite{mvc}) al món web.
+		\item una API\cite{api} Rest\cite{rest} desenvolupada amb \textit{Symfony}\cite{symfony}, un dels frameworks PHP més emprats, que serveix les peticions del client amb la informació necessària en cada cas.
+	\end{itemize}
+Per altre banda, i a un nivell més particular, el TFG en qüestió fa ús d'unes determinades tecnologíes que permeten dotar de la validesa legal desitjada al procediment del consentiment informat.\\
+Aquestes tecnologíes són:
+\begin{itemize}
+	\item Per un costat, per tal de poder firmar els documents es fa ús del que s'en diu contrassenya d'un sol ús, o com es diu en anglès, \textit{One Time Password (OTP)} basat en l'especificció del paper RFC6238\cite{otp}. \\En aquest document s'especifica un algorisme basat en una marca de temps (o \textit{timestamp}) que, mitjançant aquesta marca i una clau personal de l'usuari es genera un còdi únic per a cada ocasió. \\ \newline D'aquesta forma s'assegura que per a un usuari i un moment determinat, hi haurà un sol codi, assegurant així la identitat de l'usuari.
+	\item Per altre banda es fa ús del que s'anomena \textit{Blockchain}\cite{blockchain}, una tecnologia bastant actual coneguda principalment per a ser la tecnologia sobre la que se sustenta la moneda virtual Bitcoin i que, gràcies a la seva arquitectura distribuïda, ens permet assegurar el no repudi del document del consentiment informat.
+\end{itemize}
